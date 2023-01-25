@@ -69,13 +69,13 @@ const EditPostPage = ({ user }) => {
     formdata.append('sourceCode', sourceCode);
     formdata.append('isOriginalImages', isOriginalImages);
 
-    if (isOriginalImages) {
+    /* if (isOriginalImages) {
       formdata.append('originalImages', JSON.stringify(images));
     } else {
       for (const key of Object.keys(images)) {
         formdata.append('images', images[key]);
       }
-    }
+    }*/
 
     try {
       await mutation.mutateAsync(formdata);
